@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Box } from "@material-ui/core";
 
 export default function Home() {
   return (
@@ -12,9 +12,9 @@ export default function Home() {
     >
       <div className={styles.heading}>
         <span className={styles.headingBackground}>
-          <Typography variant="h4">
+          <Box fontWeight="fontWeightBold" variant="h3">
             Very very carefully chosen tutors
-          </Typography>
+          </Box>
         </span>
       </div>
       <Grid
