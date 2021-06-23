@@ -1,38 +1,95 @@
 import styles from "../styles/Home.module.css";
+import { Grid, Typography } from "@material-ui/core";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Grid
+      container
+      direction="column"
+      justify="center"
+      alignItems="center"
+      className={styles.container}
+    >
       <div className={styles.heading}>
         <span className={styles.headingBackground}>
-          Very very carefully chosen tutors
+          <Typography variant="h4">
+            Very very carefully chosen tutors
+          </Typography>
         </span>
       </div>
-      <div className={styles.content}>
-        <span className={styles.contentHeading}>
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+        className={styles.content}
+      >
+        <Typography variant="h5" className={styles.contentHeading}>
           Cambridge & IB Mathematics Subject Choice
-        </span>
-        <div className={styles.courses}>
-          <ul>
-            <li className={styles.courseName}>IGCSE - Mathematics</li>
-            <li>Mathematics Core/Extended 0580</li>
-            <li>International Mathematics 0607</li>
-            <li>Additional Mathematics 0606</li>
-          </ul>
-          <ul>
-            <li className={styles.courseName}>AS-A Level</li>
-            <li>Mathematics 9709</li>
-            <li>Mathematics Further 9231</li>
-          </ul>
-          <ul>
-            <li className={styles.courseName}>IBDP</li>
-            <li>Mathematics: AA SL</li>
-            <li>Mathematics: AA HL</li>
-            <li>Mathematics: AI SL</li>
-            <li>Mathematics: AI HL</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        </Typography>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="flex-start"
+          className={styles.courses}
+        >
+          <Grid>
+            <Typography
+              variant="h6"
+              component="li"
+              className={styles.courseName}
+            >
+              IGCSE - Mathematics
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Mathematics Core/Extended 0580
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              International Mathematics 0607
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Additional Mathematics 0606
+            </Typography>
+          </Grid>
+          <Grid>
+            <Typography
+              variant="h6"
+              component="li"
+              className={styles.courseName}
+            >
+              AS-A Level
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Mathematics 9709
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Mathematics Further 9231
+            </Typography>
+          </Grid>
+          <Grid>
+            <Typography
+              variant="h6"
+              component="li"
+              className={styles.courseName}
+            >
+              IBDP
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Mathematics: AA SL
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Mathematics: AA HL
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Mathematics: AI SL
+            </Typography>
+            <Typography variant="subtitle1" component="li">
+              Mathematics: AI HL
+            </Typography>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
